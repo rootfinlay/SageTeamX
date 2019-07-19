@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2> DASHBOARD</h2>
+{% block title %} TeamX | Dashboard{% endblock %}
+<hr>
+<h4> Total Scrum Teams {{ team_count }}:</h4>
+<h5> - Total Active: {{ active_scrum_teams }}<h5>
+<h5> - Total On-Hold: {{ on_hold_scrum_team }}</h5>
+<h5> - Total Sprint Zero: {{sprint_zero_scrum_teams}}</h5>
+<hr>
+<h4> Domains: {{ domain_count }}</h4>
+<hr>
+<h4> Total People:      {{ people_count }}<h5></h5>
+<h5>People in a Team: {{ active_people_count }}</h4>
+<h5>People Not in a Team: {{ unactive_people_count }}</h4>
+{% endblock%}

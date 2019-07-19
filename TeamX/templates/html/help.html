@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block header %}
+  <script>document.getElementsByTagName("html")[0].className += " js";</script>
+  {% comment %} <link rel="stylesheet" href="{% static "./css/faqstyle.css" %}"> {% endcomment %}
+  <style>
+  a:link, a:visited, a:hover {
+  text-decoration: none;
+  }
+  </style>
+{% endblock %}
+{% block title %} TeamX | FAQ {% endblock %}
+{% block content %}
+<body>
+<header class="cd-header flex flex-column flex-center">
+  <div class="text-component text-center">
+    <h1>TeamX FAQ</h1>
+  </div>
+</header>
+
+<section class="cd-faq js-cd-faq container max-width-md margin-top-lg margin-bottom-lg">
+	<ul class="cd-faq__categories">
+    <li><a class="cd-faq__category truncate" href="#users">Users</a></li>
+    <li><a class="cd-faq__category truncate" href="#administrator">Administrators</a></li>
+		<li><a class="cd-faq__category truncate" href="#account">Accounts</a></li>
+		<li><a class="cd-faq__category truncate" href="#bug_fixes_and_other">Bug Fixes and Other</a></li>
+	</ul> <!-- cd-faq__categories -->
+
+	<div class="cd-faq__items">
+
+      <ul id="users" class="cd-faq__group">
+          <li class="cd-faq__title"><h2>Users</h2></li>
+          <li class="cd-faq__item">
+            <a class="cd-faq__trigger" href="#0"><span>How do I change my password?</span></a>
+            <div class="cd-faq__content">
+              <div class="text-component">
+                <p>In order to change your password, there are two ways to do so. The first option being, emailing your admin, as they have the ability to change yor password for you, or you can reset your password through our email function. </p>
+              </div>
+            </div> <!-- cd-faq__content -->
+          </li>
+    
+          <li class="cd-faq__item">
+            <a class="cd-faq__trigger" href="#0"><span>How do I delete my account?</span></a>
+            <div class="cd-faq__content">
+              <div class="text-component">
+                <p>In order to delete your account, you must ask your administrator to delete your account. You can contact your administrator and ask for them to remove your account as needed.</p>
+              </div>
+            </div> <!-- cd-faq__content -->
+          </li>
+    
+          <li class="cd-faq__item">
+            <a class="cd-faq__trigger" href="#0"><span>How do I change my account settings?</span></a>
+            <div class="cd-faq__content">
+              <div class="text-component">
+                <p>Currently in order to change your account settings, you would need to contact the admin. </p>
+              </div>
+            </div> <!-- cd-faq__content -->
+          </li>
+    
+          <li class="cd-faq__item">
+            <a class="cd-faq__trigger" href="#0"><span>I forgot my password. How do I reset it?</span></a>
+            <div class="cd-faq__content">
+              <div class="text-component">
+                <p>If for some reason you are unable to access your account due to a password issue you would be required to use our contact page. Sending us an email with a brief description of the issue would result in you recieving an email giving you instructions on how to reset your password. </p>
+              </div>
+            </div> <!-- cd-faq__content -->
+          </li>
+        </ul> <!-- cd-faq__group -->
+
+		<ul id="administrator" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Administrator </h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I change my password?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>In order to change your password, there are two ways to do so. The first option being, emailing your admin, as they have the ability to change yor password for you, or you can reset your password through our email function. </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I delete my account?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>In order to delete your account, you must ask your administrator to delete your account. You can contact your administrator and ask for them to remove your account as needed.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I change my account settings?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Currently in order to change your account settings, you would need to contact the admin. </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>I forgot my password. How do I reset it?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>If for some reason you are unable to access your account due to a password issue you would be required to use our contact page. Sending us an email with a brief description of the issue would result in you recieving an email giving you instructions on how to reset your password. </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+    </ul> <!-- cd-faq__group -->
+
+		<ul id="account" class="cd-faq__group">
+			<li class="cd-faq__title"><h2>Account</h2></li>
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I change my password?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>In order to change your password, there are two ways to do so. The first option being, emailing your admin, as they have the ability to change yor password for you, or you can reset your password through our email function. </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I delete my account?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>In order to delete your account, you must ask your administrator to delete your account. You can contact your administrator and ask for them to remove your account as needed.</p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>How do I change my account settings?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>Currently in order to change your account settings, you would need to contact the admin. </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+
+			<li class="cd-faq__item">
+				<a class="cd-faq__trigger" href="#0"><span>I forgot my password. How do I reset it?</span></a>
+				<div class="cd-faq__content">
+          <div class="text-component">
+            <p>If for some reason you are unable to access your account due to a password issue you would be required to use our contact page. Sending us an email with a brief description of the issue would result in you recieving an email giving you instructions on how to reset your password. </p>
+          </div>
+				</div> <!-- cd-faq__content -->
+			</li>
+    </ul> <!-- cd-faq__group -->
+        
+		<ul id="bug_fixes_and_other" class="cd-faq__group">
+                <li class="cd-faq__title"><h2>Bug Fixes and Other</h2></li>
+                <li class="cd-faq__item">
+                    <a class="cd-faq__trigger" href="#0"><span>What do I do if I come across a bug?</span></a>
+                    <div class="cd-faq__content">
+              <div class="text-component">
+                <p>If you come across a bug, head over to our contact page and send us an email. Please include what the bug is and when it occured.</p>
+              </div>
+                    </div> <!-- cd-faq__content -->
+                </li>
+    
+                <li class="cd-faq__item">
+                    <a class="cd-faq__trigger" href="#0"><span>How do I delete my account?</span></a>
+                    <div class="cd-faq__content">
+              <div class="text-component">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tempore soluta, minus magnam non blanditiis dolore, in nam voluptas nobis minima deserunt deleniti id animi amet, suscipit consequuntur corporis nihil laborum facere temporibus. Qui inventore, doloribus facilis, provident soluta voluptas excepturi perspiciatis fugiat odit vero! Optio assumenda animi at! Assumenda doloremque nemo est sequi eaque, ipsum id, labore rem nisi, amet similique vel autem dolore totam facilis deserunt. Mollitia non ut libero unde accusamus praesentium sint maiores, illo, nemo aliquid?</p>
+              </div>
+                    </div> <!-- cd-faq__content -->
+                </li>
+    
+                
+    
+                <li class="cd-faq__item">
+                    <a class="cd-faq__trigger" href="#0"><span>I forgot my password. How do I reset it?</span></a>
+                    <div class="cd-faq__content">
+              <div class="text-component">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum at aspernatur iure facere ab a corporis mollitia molestiae quod omnis minima, est labore quidem nobis accusantium ad totam sunt doloremque laudantium impedit similique iste quasi cum! Libero fugit at praesentium vero. Maiores non consequuntur rerum, nemo a qui repellat quibusdam architecto voluptatem? Sequi, possimus, cupiditate autem soluta ipsa rerum officiis cum libero delectus explicabo facilis, odit ullam aperiam reprehenderit! Vero ad non harum veritatis tempore beatae possimus, ex odio quo.</p>
+              </div>
+                    </div> <!-- cd-faq__content -->
+                </li>
+            </ul> <!-- cd-faq__group -->
+	</div> <!-- cd-faq__items -->
+
+	<a href="#0" class="cd-faq__close-panel text-replace">Close</a>
+  
+  <div class="cd-faq__overlay" aria-hidden="true"></div>
+</section> <!-- cd-faq -->
+<script src="{% static "/js/util.js" %}"></script>
+<script src="{% static "/js/mainfaq.js" %}"></script> 
+
+
+{% endblock %}

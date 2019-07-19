@@ -1,0 +1,35 @@
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body, html {
+	height: 100%
+}
+
+.toppadding {
+	padding-top: 60px;
+}
+.menu {
+	display: none
+}
+
+.bgimg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("test2.jpg");
+    min-height: 85%;
+}

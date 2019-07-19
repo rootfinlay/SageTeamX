@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://www.w3schools.com/howto/tryhow_css_fullpage_demo.htm -->
+<html class="gr__w3schools_com"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
+  background-color: #EEEEEE;
+}
+
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.95;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("./img/landingbg.jpg");
+  height: 100%;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+.caption span.border {
+  /* background-color: #111;
+  color: #fff; */
+  padding: 18px;
+  font-size: 50px;
+  letter-spacing: 10px;
+  border-color: transparent !important;
+}
+
+.caption span.border2{
+  background-color: #5E8C61;
+  color: #000;
+  padding: 18px;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
+}
+
+a {
+  color: white;
+  text-decoration: none; /* no underline */
+ }
+
+.responsive {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+}
+
+</style>
+</head>
+<body data-gr-c-s-loaded="true">
+
+<div class="bgimg-1">
+  <div class="caption">
+    {% comment %} <span class="border"></span><br> {% endcomment %}
+    <span class="border">TeamX</span><BR>
+    <span class="border">Scrum Team Management</span></br></br>
+    <span class="border2"><a href="accounts/login/">LOGIN</a></a></span></br></br>
+    <img src="static\images\picture1.png" class="responsive">
+  </div>
+</div>
+
+{% comment %} </body><span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span></html> {% endcomment %}

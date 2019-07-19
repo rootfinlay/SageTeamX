@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="ScrumTeam">DEVELOPERS</div>
+
+    <table class="blueTable">
+    
+        <tr>
+            <th class="">Name</th>
+            <th class="">Scrum Team</th>
+            <th class="">Location</th>
+            <th class="">Work Pattern</th>
+            <th class="">Hours Work Per Week</th>
+            <th class="">Role</th>
+        </tr>   
+
+        {% for people in all_people %}
+            <tr>
+                <td class="">{{people.first_name}} {{people.second_name}}</td> 
+                <td class="">{{people.scrum_team_name}}</td>
+                <td class="">{{people.location}}</td> 
+                <td class="">{{people.work_pattern}}</td>
+                <td class="">{{people.hours_per_week}}</td>
+                <td class="">{{people.scrum_team_roles}}</td>
+
+            </tr>       
+        {% endfor %}             
+    </table>
+
+</div>
+
+<div class="TeamMembers">LEAVE CALENDAR</div>
+   <table class="blueTable">
+        <tr>
+            <th class="">Name</th>
+            <th class="">Total Leave Hours</th>
+            <th class="">Start_date</th>
+            <th class="">End Date</th>
+            <th class="">Leave Type</th>
+        </tr>
+        {% for people in all_people %}
+            {% for leave in all_leave %}
+                {% if leave.team_member.id ==  people.id %}
+                    <tr>
+                        <td class="">{{leave.team_member}}</td> 
+                        <td class="">{{leave.total_hours}}</td>   
+                        <td class="">{{leave.start_date}}</td>
+                        <td class="">{{leave.end_date}}</td>
+                        <td class="">{{leave.leave_type}}</td>
+                    </tr>
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+ 
+ 
+    <style>
+    .ScrumTeam{
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }    
+
+    .TeamMembers{
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    table.blueTable {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    }
+    table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+    }
+    table.blueTable tbody td {
+    font-size: 13px;
+    }
+    table.blueTable tr:nth-child(even) {
+    background: #badbbd; 
+    }
+    table.blueTable thead {
+    background: #4BA464;
+    background: -moz-linear-gradient(top, #78bb8b 0%, #5dad73 66%, #4BA464 100%);
+    background: -webkit-linear-gradient(top, #78bb8b 0%, #5dad73 66%, #4BA464 100%);
+    background: linear-gradient(to bottom, #78bb8b 0%, #5dad73 66%, #4BA464 100%);
+    border-bottom: 2px solid #444444;
+    }
+    table.blueTable thead th {
+    font-size: 15px;
+    font-weight: normal;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+    }
+    table.blueTable thead th:first-child {
+    border-left: none;
+    }
+
+    table.blueTable tfoot td {
+    font-size: 14px;
+    }
+    table.blueTable tfoot .links {
+    text-align: right;
+    }
+    table.blueTable tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+    }
+    </style>
+{% endblock%}

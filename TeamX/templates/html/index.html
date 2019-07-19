@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}TeamX | Dashboard{% endblock %}
+{% block content %}
+{% if user.is_authenticated %}
+ {% comment %}  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p> {% endcomment %}
+{% else %}
+  {% include "./landingpage.html" %}
+  {% comment %} <a href="{% url 'login' %}">login</a> {% endcomment %}
+{% endif %}
+{% endblock %}

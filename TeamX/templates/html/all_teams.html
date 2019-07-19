@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="ScrumTeam">SCRUM TEAMS</div>
+
+    <table class="blueTable">
+    
+        <tr>
+            <th class="">Scrum Team</th>
+            <th class="">Scrum Master</th>
+            <th class="">Status</th>
+            <th class="">Type</th> 
+            <th class="">Focus</th>
+            <th class="">Domain</th>
+        </tr>
+    
+        {% for team in teams %} 
+            <tr>
+                <td class=""><a href="{% url 'team_details' pk=team.id %}">{{ team.team_name }}</a></td> 
+                <td class="">{{ team.scrum_master}}</td>
+                <td class="">{{ team.team_status}}</td>
+                <td class="">{{ team.team_type}} </td>
+                <td class="">{{ team.current_focus}}</td>
+                <td class="">{{ team.domain}}</td>
+        {% endfor %}             
+        </tr>
+    </table>
+
+    <style>
+
+    .ScrumTeam{
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+
+    }    
+    table.blueTable {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+    }
+    table.blueTable td, table.blueTable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+    }
+    table.blueTable tbody td {
+    font-size: 13px;
+    }
+    table.blueTable tr:nth-child(even) {
+    background: #badbbd; 
+    }
+    table.blueTable thead {
+    background: #4BA464;
+    background: -moz-linear-gradient(top, #78bb8b 0%, #5dad73 66%, #4BA464 100%);
+    background: -webkit-linear-gradient(top, #78bb8b 0%, #5dad73 66%, #4BA464 100%);
+    background: linear-gradient(to bottom, #78bb8b 0%, #5dad73 66%, #4BA464 100%);
+    border-bottom: 2px solid #444444;
+    }
+    table.blueTable thead th {
+    font-size: 15px;
+    font-weight: normal;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+    }
+    table.blueTable thead th:first-child {
+    border-left: none;
+    }
+
+    table.blueTable tfoot td {
+    font-size: 14px;
+    }
+    table.blueTable tfoot .links {
+    text-align: right;
+    }
+    table.blueTable tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+    }
+    </style>
+{% endblock%}

@@ -1,0 +1,71 @@
+{% extends "Admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block extrastyle %}
+<style>
+
+#header {
+    background: #262626;
+}
+
+.button, input[type=submit], input[type=button], .submit-row input, a.button {
+    background: #003349;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.button:active, input[type=submit]:active, input[type=button]:active,
+.button:focus, input[type=submit]:focus, input[type=button]:focus,
+.button:hover, input[type=submit]:hover, input[type=button]:hover {
+    background: #1D65A6;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#branding h1, #branding h1 a:link, #branding h1 a:visited {
+    color: white;
+}
+
+div.breadcrumbs {
+    background: #7bb67e;
+    padding: 10px 40px;
+    border: none;
+    font-size: 14px;
+    text-align: left;
+    color: black; 
+}
+
+.module h2, .module caption, .inline-group h2 {
+    margin: 0;
+    padding: 8px;
+    font-weight: 400;
+    font-size: 13px;
+    text-align: left;
+    background: #5E8C61;
+    color: #fff;
+}
+
+Myelement {
+	transform: rotate(71deg)
+		rotateX(257deg)
+		rotateY(38deg)
+		rotateZ(36deg)
+		perspective(2000px)
+		scale(0.7)
+		translate(30px,100px)
+		skew(180deg,46deg);
+	transform-origin: left 57% -247px;
+}
+</style>
+{% endblock %}
+
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">TeamX Admin Panel</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
