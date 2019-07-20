@@ -100,8 +100,8 @@ def contact(request, *args, **kwargs):
         send_mail(
             'Subject here',
             'Here is the message.',
-            'sageteamxofficial@gmail.com',
-            ['sageteamxofficial@gmail.com'],
+            'finlay.business@protonmail.com',
+            ['finlay.business@protonmail.com'],
             fail_silently=False,
         )
 
