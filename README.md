@@ -9,3 +9,5 @@ pip install Django==2.2.3<br>
 pip install pylint-django<br>
 
 There is also a Start Project batch file but it will need to be edited for indvidual users to point to the correct directory.
+
+Default username and password is root and toor for demonstration purposes
